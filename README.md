@@ -6,5 +6,5 @@ This project is a personal portfolio website coded with React.
 
 Please feel free to contact me for any inquiries about my website or just in general!
 
-skilesz@purdue.edu
+<p>skilesz@purdue.edu</p>
 https://www.linkedin.com/in/zach-skiles/
