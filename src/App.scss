@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// Reset
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ body {
   font-family: 'Montserrat', 'Serif';
 }
 
+// Utility Classes
 .skeleton {
   border: 1px solid black;
   display: flex;
@@ -18,6 +21,7 @@ body {
   margin-bottom: 10px;
 }
 
+// Navbar
 #navbar {
   height: 4.5rem;
   width: 100%;
