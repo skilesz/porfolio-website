@@ -11,6 +11,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .skeleton {
@@ -62,16 +63,19 @@ a {
   justify-content: space-evenly;
 }
 
-#navbar .container ul li {
+#navbar .container ul li,
+#navbar .container ul .active {
   display: inline-block;
 }
 
-#navbar .container ul li a {
+#navbar .container ul li a,
+#navbar .container ul .active a {
   color: white;
   transition: color 0.3s;
 }
 
-#navbar .container ul li a::after {
+#navbar .container ul li a::after,
+#navbar .container ul .active a::after {
   content: '';
   display: block;
   width: 0;
@@ -80,11 +84,13 @@ a {
   transition: width 0.3s;
 }
 
-#navbar .container ul li a:hover {
+#navbar .container ul li a:hover,
+#navbar .container ul .active a:hover {
   color: #ec3e32;
 }
 
-#navbar .container ul li a:hover::after {
+#navbar .container ul li a:hover::after,
+#navbar .container ul .active a:hover::after {
   width: 100%;
 }
 
