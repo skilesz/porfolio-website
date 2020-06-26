@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$primary-color: #484747;
+$secondary-color: #ec3e32;
+$light-color: white;
+$max-width: 1100px;
+
 // Reset
 * {
   margin: 0;
@@ -11,14 +16,29 @@ body {
   font-family: 'Montserrat', 'Serif';
 }
 
+a {
+  text-decoration: none;
+}
+
 // Utility Classes
 .skeleton {
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: $light-color;
   margin-bottom: 10px;
+}
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.hidden {
+  top: -5rem !important;
 }
 
 // Navbar
@@ -27,34 +47,92 @@ body {
   width: 100%;
   position: fixed;
   z-index: 10;
+  background-color: $primary-color;
+  top: 0;
+  transition: top 0.5s;
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 7fr 2fr;
+    align-items: center;
+
+    // Logo
+    h2 {
+      a {
+        color: $secondary-color;
+      }
+    }
+
+    // Menu Items
+    ul {
+      justify-self: end;
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $light-color;
+          transition: color 0.3s;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: $secondary-color;
+            transition: width 0.3s;
+          }
+
+          &:hover {
+            color: $secondary-color;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
+// Home Section
 #home {
   min-height: 100vh;
   width: 100%;
 }
 
-#footer {
-  min-height: 7.5rem;
-  width: 100%;
-}
-
+// Projects Section
 #projects {
   min-height: 100vh;
   width: 100%;
 }
 
+// About Section
 #about {
   min-height: 100vh;
   width: 100%;
 }
 
+// Skills Section
 #skills {
   min-height: 100vh;
   width: 100%;
 }
 
+// Experience Section
 #experience {
   min-height: 100vh;
+  width: 100%;
+}
+
+// Footer
+#footer {
+  min-height: 7.5rem;
   width: 100%;
 }

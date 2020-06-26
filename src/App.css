@@ -9,6 +9,10 @@ body {
   font-family: 'Montserrat', 'Serif';
 }
 
+a {
+  text-decoration: none;
+}
+
 .skeleton {
   border: 1px solid black;
   display: flex;
@@ -18,20 +22,74 @@ body {
   margin-bottom: 10px;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.hidden {
+  top: -5rem !important;
+}
+
 #navbar {
   height: 4.5rem;
   width: 100%;
   position: fixed;
   z-index: 10;
+  background-color: #484747;
+  top: 0;
+  transition: top 0.5s;
+}
+
+#navbar .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 7fr 2fr;
+  align-items: center;
+}
+
+#navbar .container h2 a {
+  color: #ec3e32;
+}
+
+#navbar .container ul {
+  justify-self: end;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navbar .container ul li {
+  display: inline-block;
+}
+
+#navbar .container ul li a {
+  color: white;
+  transition: color 0.3s;
+}
+
+#navbar .container ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ec3e32;
+  transition: width 0.3s;
+}
+
+#navbar .container ul li a:hover {
+  color: #ec3e32;
+}
+
+#navbar .container ul li a:hover::after {
+  width: 100%;
 }
 
 #home {
   min-height: 100vh;
-  width: 100%;
-}
-
-#footer {
-  min-height: 7.5rem;
   width: 100%;
 }
 
@@ -52,5 +110,10 @@ body {
 
 #experience {
   min-height: 100vh;
+  width: 100%;
+}
+
+#footer {
+  min-height: 7.5rem;
   width: 100%;
 }
