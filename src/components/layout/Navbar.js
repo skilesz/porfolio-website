@@ -3,6 +3,12 @@ import { scroller } from 'react-scroll';
 
 const Navbar = () => {
   useEffect(() => {
+    if (window.pageYOffset > document.documentElement.clientHeight) {
+      document.querySelector('#navbar').className = '';
+    } else {
+      document.querySelector('#navbar').className = 'hidden';
+    }
+
     window.addEventListener('scroll', (e) => {
       if (window.pageYOffset > document.documentElement.clientHeight) {
         document.querySelector('#navbar').className = '';
