@@ -3,14 +3,22 @@ import { scroller } from 'react-scroll';
 
 const Navbar = () => {
   useEffect(() => {
-    if (window.pageYOffset > document.documentElement.clientHeight) {
+    if (
+      window.pageYOffset >
+      document.documentElement.clientHeight -
+        document.querySelector('#navbar').clientHeight
+    ) {
       document.querySelector('#navbar').className = '';
     } else {
       document.querySelector('#navbar').className = 'hidden';
     }
 
     window.addEventListener('scroll', (e) => {
-      if (window.pageYOffset > document.documentElement.clientHeight) {
+      if (
+        window.pageYOffset >
+        document.documentElement.clientHeight -
+          document.querySelector('#navbar').clientHeight
+      ) {
         document.querySelector('#navbar').className = '';
       } else {
         document.querySelector('#navbar').className = 'hidden';
@@ -23,6 +31,10 @@ const Navbar = () => {
       activeClass: 'active',
       duration: 1000,
       smooth: 'easeInOutQuint',
+      offset:
+        location === 'home'
+          ? 0
+          : -document.querySelector('#navbar').clientHeight + 1,
     });
   };
 

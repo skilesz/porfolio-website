@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +40,7 @@ a {
   width: 100%;
   position: fixed;
   z-index: 10;
-  background-color: #484747;
+  background-color: #293039;
   top: 0;
   transition: top 0.5s;
 }
@@ -97,6 +98,71 @@ a {
 #home {
   min-height: 100vh;
   width: 100%;
+  background: url("./img/home-background-4.jpg") no-repeat center fixed;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Fjalla One', 'Serif';
+}
+
+#home #main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#home #main-section h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+#home #main-section p {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem 0;
+  align-self: center;
+}
+
+#home #main-section > #title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5rem;
+  align-self: center;
+}
+
+#home #main-section ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  color: white;
+}
+
+#home #main-section h2 {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#home #main-section h2:hover {
+  transform: scale(1.2);
+}
+
+#home .transition {
+  color: #293039;
+  align-self: center;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  padding: 0.5rem 3rem;
+  transition: transform 0.3s;
+  background-color: white;
+  border-radius: 15px;
+}
+
+#home .transition:hover {
+  transform: scale(1.2);
 }
 
 #projects {
