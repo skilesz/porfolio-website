@@ -211,7 +211,7 @@ a {
     padding-right: 5rem;
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       padding: 0.5rem;
       text-align: center;
     }
@@ -226,7 +226,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 60%;
+      max-width: 50%;
       font-family: $about-font;
       color: $primary-color;
       text-align: center;
@@ -242,15 +242,15 @@ a {
         margin-right: auto;
       }
 
-      h3 {
-        color: $secondary-color;
-        margin-bottom: 3rem;
-        font-size: 1.6rem;
-      }
+      // h3 {
+      //   color: $secondary-color;
+      //   margin-bottom: 3rem;
+      //   font-size: 1.6rem;
+      // }
 
       p {
         color: $light-grey;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         line-height: 2rem;
       }
 

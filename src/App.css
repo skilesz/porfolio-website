@@ -198,7 +198,7 @@ a {
 }
 
 #about .content-container h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 0.5rem;
   text-align: center;
 }
@@ -213,7 +213,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 60%;
+  max-width: 50%;
   font-family: "Roboto", "sans serif";
   color: #293039;
   text-align: center;
@@ -230,15 +230,9 @@ a {
   margin-right: auto;
 }
 
-#about .content-container #about-content h3 {
-  color: #ec3e32;
-  margin-bottom: 3rem;
-  font-size: 1.6rem;
-}
-
 #about .content-container #about-content p {
   color: #888888;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   line-height: 2rem;
 }
 

@@ -17,14 +17,12 @@ const About = () => {
             Computer/Electrical Engineering, and Music Technology.
           </p>
           <br />
-          <br />
           <p>
             <strong>QUICK FACTS</strong>
           </p>
           <p>1. Technology and computers are my passion.</p>
           <p>2. I am a quick learner, and my grades at Purdue reflect that.</p>
           <p>3. I'm a huge fan of Fleetwood Mac!</p>
-          <br />
           <br />
           <p>
             <strong>PERSONAL STATEMENT</strong>
@@ -35,14 +33,10 @@ const About = () => {
             to <span>develop</span> meaningful and fulfilling relationships."
           </p>
           <br />
-          <br />
           <p>
             <strong>AREAS OF INTEREST</strong>
           </p>
-          <p>- Systems Programming</p>
-          <p>- Hardware Design</p>
-          <p>- Web Development</p>
-          <p>- Security</p>
+          <p>Systems Programming, Hardware Design, Web Development, Security</p>
         </div>
       </div>
     </div>
