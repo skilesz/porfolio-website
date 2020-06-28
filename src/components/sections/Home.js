@@ -30,7 +30,7 @@ const Home = () => {
         </ul>
         <div id='title'>
           <h1>ZACH SKILES</h1>
-          <p>Computer Science @ Purdue</p>
+          <p>Computer Science @ Purdue University</p>
         </div>
       </div>
       {/* eslint-disable-next-line */}

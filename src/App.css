@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 }
 
 body {
-  font-family: 'Montserrat', 'Serif';
+  font-family: "Fjalla One", "sans serif";
 }
 
 a {
@@ -20,7 +21,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #fff9d0;
   margin-bottom: 10px;
 }
 
@@ -31,8 +32,24 @@ a {
   overflow: hidden;
 }
 
+.content-container {
+  margin: auto;
+  padding: 3rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .hidden {
   top: -5rem !important;
+}
+
+.card-dark {
+  width: 40%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #293039;
+  color: #fff9d0;
 }
 
 #navbar {
@@ -43,6 +60,8 @@ a {
   background-color: #293039;
   top: 0;
   transition: top 0.5s;
+  font-size: 1.2rem;
+  font-family: "Fjalla One", "sans serif";
 }
 
 #navbar .container {
@@ -71,7 +90,7 @@ a {
 
 #navbar .container ul li a,
 #navbar .container ul .active a {
-  color: white;
+  color: #fff9d0;
   transition: color 0.3s;
 }
 
@@ -96,14 +115,14 @@ a {
 }
 
 #home {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background: url("./img/home-background-4.jpg") no-repeat center fixed;
   background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'Fjalla One', 'Serif';
+  font-family: "Fjalla One", "sans serif";
 }
 
 #home #main-section {
@@ -113,12 +132,12 @@ a {
 
 #home #main-section h1 {
   font-size: 5rem;
-  color: white;
+  color: #fff9d0;
 }
 
 #home #main-section p {
   font-size: 1.5rem;
-  color: white;
+  color: #fff9d0;
   padding: 1rem 0;
   align-self: center;
 }
@@ -137,7 +156,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem 0;
-  color: white;
+  color: #fff9d0;
 }
 
 #home #main-section h2 {
@@ -157,7 +176,7 @@ a {
   margin-bottom: 3.5rem;
   padding: 0.5rem 3rem;
   transition: transform 0.3s;
-  background-color: white;
+  background-color: #fff9d0;
   border-radius: 15px;
 }
 
@@ -165,32 +184,90 @@ a {
   transform: scale(1.2);
 }
 
-#projects {
-  min-height: 100vh;
+#about {
+  min-height: 95vh;
   width: 100%;
 }
 
-#about {
-  min-height: 100vh;
+#about .content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+#about .content-container h2 {
+  font-size: 3rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#about .content-container img {
+  height: 80vh;
+  border-radius: 15px;
+  align-self: center;
+}
+
+#about .content-container #about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+  font-family: "Roboto", "sans serif";
+  color: #293039;
+  text-align: center;
+}
+
+#about .content-container #about-content h2 {
+  display: inline-block;
+  margin-bottom: 3rem;
+  background-color: #293039;
+  border-radius: 25px;
+  width: 50%;
+  color: #fff9d0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about .content-container #about-content h3 {
+  color: #ec3e32;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+#about .content-container #about-content p {
+  color: #888888;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#about .content-container #about-content span {
+  color: #ec3e32;
+  font-weight: bold;
+}
+
+#projects {
+  height: 100vh;
   width: 100%;
 }
 
 #skills {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 #experience {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 #contact {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 #footer {
-  min-height: 7.5rem;
+  height: 7.5rem;
   width: 100%;
 }

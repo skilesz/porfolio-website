@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 $primary-color: #293039;
 $secondary-color: #ec3e32;
-$light-color: white;
+$light-color: #fff9d0;
+$light-grey: #888888;
 $max-width: 1100px;
+$home-font: 'Fjalla One', 'sans serif';
+$about-font: 'Roboto', 'sans serif';
 
 // Reset
 * {
@@ -14,7 +18,7 @@ $max-width: 1100px;
 }
 
 body {
-  font-family: 'Montserrat', 'Serif';
+  font-family: $home-font;
 }
 
 a {
@@ -39,8 +43,24 @@ a {
   overflow: hidden;
 }
 
+.content-container {
+  margin: auto;
+  padding: 3rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .hidden {
   top: -5rem !important;
+}
+
+.card-dark {
+  width: 40%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: $primary-color;
+  color: $light-color;
 }
 
 // Navbar
@@ -52,6 +72,8 @@ a {
   background-color: $primary-color;
   top: 0;
   transition: top 0.5s;
+  font-size: 1.2rem;
+  font-family: $home-font;
 
   .container {
     height: 100%;
@@ -106,14 +128,14 @@ a {
 
 // Home Section
 #home {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background: url('./img/home-background-4.jpg') no-repeat center fixed;
   background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'Fjalla One', 'Serif';
+  font-family: $home-font;
 
   #main-section {
     display: flex;
@@ -176,38 +198,96 @@ a {
   }
 }
 
-// Projects Section
-#projects {
-  min-height: 100vh;
-  width: 100%;
-}
-
 // About Section
 #about {
-  min-height: 100vh;
+  min-height: 95vh;
+  width: 100%;
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    h2 {
+      font-size: 3rem;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    img {
+      height: 80vh;
+      border-radius: 15px;
+      align-self: center;
+    }
+
+    #about-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 60%;
+      font-family: $about-font;
+      color: $primary-color;
+      text-align: center;
+
+      h2 {
+        display: inline-block;
+        margin-bottom: 3rem;
+        background-color: $primary-color;
+        border-radius: 25px;
+        width: 50%;
+        color: $light-color;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h3 {
+        color: $secondary-color;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+      }
+
+      p {
+        color: $light-grey;
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      span {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Projects Section
+#projects {
+  height: 100vh;
   width: 100%;
 }
 
 // Skills Section
 #skills {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 // Experience Section
 #experience {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 // Contact Sections
 #contact {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 }
 
 // Footer
 #footer {
-  min-height: 7.5rem;
+  height: 7.5rem;
   width: 100%;
 }
