@@ -63,6 +63,14 @@ a {
   color: $light-color;
 }
 
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $light-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
 // Navbar
 #navbar {
   height: 4.5rem;
@@ -131,7 +139,7 @@ a {
   height: 100vh;
   width: 100%;
   background: url('./img/home-background-4.jpg') no-repeat center fixed;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,15 +208,15 @@ a {
 
 // About Section
 #about {
-  min-height: 95vh;
   width: 100%;
 
   .content-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas: 'bioimage bio bio';
+    grid-template-columns: repeat(3, 1fr);
     padding-left: 5rem;
     padding-right: 5rem;
+    width: 100%;
 
     h2 {
       font-size: 2.5rem;
@@ -217,29 +225,40 @@ a {
     }
 
     img {
-      height: 80vh;
-      border-radius: 15px;
-      align-self: center;
+      height: 100%;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      overflow: hidden;
+      grid-area: bioimage;
+      object-fit: cover;
+      justify-self: stretch;
     }
 
     #about-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 50%;
       font-family: $about-font;
       color: $primary-color;
       text-align: center;
+      background: $primary-color;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      padding: 5rem;
+      overflow: hidden;
+      grid-area: bio;
 
       h2 {
         display: inline-block;
-        margin-bottom: 3rem;
-        background-color: $primary-color;
-        border-radius: 25px;
+        margin-bottom: 1rem;
         width: 50%;
         color: $light-color;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .bottom-line {
+        margin-bottom: 3rem;
       }
 
       // h3 {
@@ -249,7 +268,7 @@ a {
       // }
 
       p {
-        color: $light-grey;
+        color: $light-color;
         font-size: 1.1rem;
         line-height: 2rem;
       }
@@ -291,3 +310,5 @@ a {
   height: 7.5rem;
   width: 100%;
 }
+
+// Media Queries

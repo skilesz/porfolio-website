@@ -52,6 +52,14 @@ a {
   color: #fff9d0;
 }
 
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #fff9d0;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
 #navbar {
   height: 4.5rem;
   width: 100%;
@@ -118,7 +126,7 @@ a {
   height: 100vh;
   width: 100%;
   background: url("./img/home-background-4.jpg") no-repeat center fixed;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -185,16 +193,16 @@ a {
 }
 
 #about {
-  min-height: 95vh;
   width: 100%;
 }
 
 #about .content-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-areas: 'bioimage bio bio';
+  grid-template-columns: repeat(3, 1fr);
   padding-left: 5rem;
   padding-right: 5rem;
+  width: 100%;
 }
 
 #about .content-container h2 {
@@ -204,34 +212,45 @@ a {
 }
 
 #about .content-container img {
-  height: 80vh;
-  border-radius: 15px;
-  align-self: center;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  overflow: hidden;
+  grid-area: bioimage;
+  object-fit: cover;
+  justify-self: stretch;
 }
 
 #about .content-container #about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 50%;
   font-family: "Roboto", "sans serif";
   color: #293039;
   text-align: center;
+  background: #293039;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 5rem;
+  overflow: hidden;
+  grid-area: bio;
 }
 
 #about .content-container #about-content h2 {
   display: inline-block;
-  margin-bottom: 3rem;
-  background-color: #293039;
-  border-radius: 25px;
+  margin-bottom: 1rem;
   width: 50%;
   color: #fff9d0;
   margin-left: auto;
   margin-right: auto;
 }
 
+#about .content-container #about-content .bottom-line {
+  margin-bottom: 3rem;
+}
+
 #about .content-container #about-content p {
-  color: #888888;
+  color: #fff9d0;
   font-size: 1.1rem;
   line-height: 2rem;
 }

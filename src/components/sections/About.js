@@ -7,6 +7,7 @@ const About = () => {
         <img src={require('../../img/profile-photo.JPG')} alt='' />
         <div id='about-content'>
           <h2>ABOUT ME</h2>
+          <div className='bottom-line'></div>
           {/* <h3>
             Computer science student @ Purdue University and web development
             enthusiast.
@@ -18,19 +19,16 @@ const About = () => {
           </p>
           <br />
           <p>
-            <strong>QUICK FACTS</strong>
+            Here are some quick facts about me! First of all, technology and
+            computers are my passion, and have been since I was very young.
+            Second, I am a quick and avid learner, and my grades at Purdue
+            reflect that. Last but not least, I'm a huge fan of Fleetwood Mac!
           </p>
-          <p>1. Technology and computers are my passion.</p>
-          <p>2. I am a quick learner, and my grades at Purdue reflect that.</p>
-          <p>3. I'm a huge fan of Fleetwood Mac!</p>
           <br />
           <p>
-            <strong>PERSONAL STATEMENT</strong>
-          </p>
-          <p>
-            "I work hard to <span>inspire</span> others with my creativity and
+            I work hard to <span>inspire</span> others with my creativity and
             passion, to <span>build</span> new and innovative technologies, and
-            to <span>develop</span> meaningful and fulfilling relationships."
+            to <span>develop</span> meaningful and fulfilling relationships.
           </p>
           <br />
           <p>
