@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <div className="section-between"></div>
       <Experience />
       <Projects />
       <Skills />
